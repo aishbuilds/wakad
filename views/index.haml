@@ -1,0 +1,11 @@
+%head
+	%script{:type=>"text/javascript", :src=>"js/jquery-1.11.3.min.js"}
+	%script{:type=>"text/javascript", :src=>"js/main.js"}
+%body
+	%div#input
+		%form
+			%label{:for => "code"} Code:
+			%textarea{:name => "code", :id => "code", :rows => 10}
+			%br
+			%input{:type => "button", :value => "Run Code", :id => "submit-btn"}
+	%div#output
