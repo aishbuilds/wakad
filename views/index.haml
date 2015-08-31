@@ -10,10 +10,12 @@
 	%link{:rel=>"stylesheet", :href=>"css/codemirror.css"}
 %body
 	%div{:class => "row margin-top-50"}
-		%div{:class=>"form-group"}
-			%textarea{:id => "code", :class => "col-md-6 form-control margin-bottom-20"}
-		%div{:class=>"form-group"}
-			%input{:type => "button", :value => "Run Code", :id => "submit-btn",  :class=>"btn btn-default"}
+		%div{:id => "input", :class=>"col-md-6 col-md-offset-1"}
+			%div{:class=>"form-group"}
+				%label{:for => "code"} Code:
+				%textarea{:id => "code", :class => "col-md-6 form-control margin-bottom-20"}
+			%div{:class=>"form-group"}
+				%input{:type => "button", :value => "Run Code", :id => "submit-btn",  :class=>"btn btn-default"}
 
 		%div{:id => "output-div", :class=>"col-md-4"}
 			%label Program Output:
