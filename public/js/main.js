@@ -1,5 +1,9 @@
 $(document).ready(function(){
-	
+	var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            mode:  "ruby"
+        });
+
 	hash = {
 		"अगर": "if",
 		"अन्यथा": "else",
@@ -8,6 +12,7 @@ $(document).ready(function(){
 	}
 
 	$('#submit-btn').click(function(){
+		editor.save()
 		console.log($('#code').val());
 		arr = $('#code').val().replace(/\n/g, ' ')
 		console.log('------')
@@ -28,6 +33,7 @@ $(document).ready(function(){
 			method: "POST",
 			data: {code: input}
 		}).done(function(data) {
+			$("#output").html("")
 			console.log( "done" );
 			console.log(data)
 			$("#output").html(data)
