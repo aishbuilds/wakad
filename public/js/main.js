@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	hash = {
 		"अगर": "if",
-		"अन्यथा": "else",
+		"अथवा": "else",
 		"छाप": "p",
 		"समाप्त": "end"
 	}
@@ -14,7 +14,7 @@ $(document).ready(function(){
 	$('#submit-btn').click(function(){
 		editor.save()
 		console.log($('#code').val());
-		arr = $('#code').val().replace(/\n/g, ' ')
+		arr = $('#code').val().replace(/\n/g, ' ; ')
 		console.log('------')
 		console.log(arr)
 		arr = arr.split(' ')
