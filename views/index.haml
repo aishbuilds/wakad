@@ -13,9 +13,23 @@
 		%div{:id => "input", :class=>"col-md-6 col-md-offset-1"}
 			%div{:class=>"form-group"}
 				%label{:for => "code"} Code:
-				%textarea{:id => "code", :class => "col-md-6 form-control margin-bottom-20"}
+				%textarea{:id => "code", :class => "col-md-5 form-control margin-bottom-20"}
 			%div{:class=>"form-group"}
 				%input{:type => "button", :value => "Run Code", :id => "submit-btn",  :class=>"btn btn-default"}
+
+			%div
+				%div{:class=>"form-group"}
+					%input{:type => "button", :value => "अगर (if)", :class=>"keywords btn btn-default", :keyword => "अगर"}
+
+					%input{:type => "button", :value => "अथवा (else)", :class=>"keywords btn btn-default", :keyword => "अथवा"}
+					
+					%input{:type => "button", :value => "छाप (print)", :class=>"keywords btn btn-default", :keyword => "छाप"}
+
+					%input{:type => "button", :value => "समाप्त (end)", :class=>"keywords btn btn-default", :keyword => "समाप्त"}
+
+					%input{:type => "button", :value => "जब (while)", :class=>"keywords btn btn-default", :keyword => "जब"}
+
+					%input{:type => "button", :value => "कर (do)", :class=>"keywords btn btn-default", :keyword => "कर"}
 
 		%div{:id => "output-div", :class=>"col-md-4"}
 			%label Program Output:

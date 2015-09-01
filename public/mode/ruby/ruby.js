@@ -18,12 +18,13 @@ CodeMirror.defineMode("ruby", function(config) {
     return o;
   }
   var keywords = wordObj([
-    "alias", "and", "BEGIN", "begin", "break", "case", "class", "def", "defined?", "do", "else", "अथवा",
+    "alias", "and", "BEGIN", "begin", "break", "case", "class", "def", "defined?", "do", "कर", "else", "अथवा",
     "elsif", "END", "end", "समाप्त", "ensure", "false", "for", "if", "अगर", "in", "module", "next", "not", "or",
     "redo", "rescue", "retry", "return", "self", "super", "then", "true", "undef", "unless",
-    "until", "when", "while", "yield", "nil", "raise", "throw", "catch", "fail", "loop", "callcc",
+    "until", "when", "while", "जब", "yield", "nil", "raise", "throw", "catch", "fail", "loop", "callcc",
     "caller", "lambda", "proc", "public", "protected", "private", "require", "load",
-    "require_relative", "extend", "autoload", "__END__", "__FILE__", "__LINE__", "__dir__"
+    "require_relative", "extend", "autoload", "__END__", "__FILE__", "__LINE__", "__dir__",
+    "छाप"
   ]);
   var indentWords = wordObj(["def", "class", "case", "for", "while", "module", "then",
                              "catch", "loop", "proc", "begin"]);

@@ -8,11 +8,14 @@ $(document).ready(function(){
 		"अगर": "if",
 		"अथवा": "else",
 		"छाप": "p",
-		"समाप्त": "end"
+		"समाप्त": "end",
+		"जब": "while",
+		"कर": "do"
 	}
 
 	$('#submit-btn').click(function(){
 		editor.save()
+		$("#output").html("")
 		console.log($('#code').val());
 		arr = $('#code').val().replace(/\n/g, ' ; ')
 		console.log('------')
@@ -20,7 +23,8 @@ $(document).ready(function(){
 		arr = arr.split(' ')
 		console.log(arr);
 		for(i = 0; i < arr.length; i++){
-			if(hash[arr[i]]){
+
+			if(hash[arr[i].replace(/ /g, '')]){
 				arr[i] = hash[arr[i]]
 			}
 		}
@@ -33,10 +37,14 @@ $(document).ready(function(){
 			method: "POST",
 			data: {code: input}
 		}).done(function(data) {
-			$("#output").html("")
 			console.log( "done" );
 			console.log(data)
 			$("#output").html(data)
 		});
+	})
+
+	$(".keywords").click(function(){
+		editor.replaceRange($(this).attr('keyword') + " ", CodeMirror.Pos(editor.lastLine()))
+		editor.focus()
 	})
 })
