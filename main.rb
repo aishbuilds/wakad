@@ -1,6 +1,7 @@
 
 require 'rubygems'
 require 'sinatra'
+require 'shotgun'
 
 get "/" do
 	haml :index
@@ -21,4 +22,8 @@ post "/eval" do
 	contents = file.read
 	
 	haml :output, :locals => { :output => contents }
+end
+
+get '/presentation' do
+	File.read(File.join('views', 'presentation.html'))
 end

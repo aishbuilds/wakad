@@ -19,7 +19,7 @@ CodeMirror.defineMode("ruby", function(config) {
   }
   var keywords = wordObj([
     "alias", "and", "BEGIN", "begin", "break", "case", "class", "def", "defined?", "do", "कर", "else", "अथवा",
-    "elsif", "END", "end", "समाप्त", "ensure", "false", "for", "if", "अगर", "in", "module", "next", "not", "or",
+    "elsif", "END", "end", "समाप्त", "ensure", "false", "for", "if", "यदि", "in", "module", "next", "not", "or",
     "redo", "rescue", "retry", "return", "self", "super", "then", "true", "undef", "unless",
     "until", "when", "while", "जब", "yield", "nil", "raise", "throw", "catch", "fail", "loop", "callcc",
     "caller", "lambda", "proc", "public", "protected", "private", "require", "load",

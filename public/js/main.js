@@ -5,7 +5,7 @@ $(document).ready(function(){
         });
 
 	hash = {
-		"अगर": "if",
+		"यदि": "if",
 		"अथवा": "else",
 		"छाप": "p",
 		"समाप्त": "end",
